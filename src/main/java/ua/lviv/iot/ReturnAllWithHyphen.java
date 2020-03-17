@@ -1,9 +1,11 @@
+package ua.lviv.iot;
+
 import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class ReturnAllWithHyphen {
-    public static ArrayList<String> regex(String inputText){
+    public static ArrayList<String> wordsValidation(String inputText){
         ArrayList<String> wordsWithHyphen = new ArrayList<String>();
         Pattern pattern = Pattern.compile("([a-z0-9])+-([a-z0-9])+(\\s|,|!|\\.|\\?|)", Pattern.CASE_INSENSITIVE);
         Matcher matcher = pattern.matcher(inputText);

@@ -1,4 +1,7 @@
+package ua.lviv.iot;
+
 import org.junit.jupiter.api.*;
+import ua.lviv.iot.ReturnAllWithHyphen;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
@@ -19,7 +22,7 @@ class ReturnAllWithHyphenTest {
         Scanner scanner = new Scanner(System.in);
         ArrayList<String> resultedWords = new ArrayList<String>();
         while(scanner.hasNextLine()){
-            resultedWords.addAll(ReturnAllWithHyphen.regex(scanner.nextLine()));
+            resultedWords.addAll(ReturnAllWithHyphen.wordsValidation(scanner.nextLine()));
         }
         Collections.sort(resultedWords);
 
